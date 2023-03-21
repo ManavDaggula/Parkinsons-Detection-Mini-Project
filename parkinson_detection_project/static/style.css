@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+p{
+    font-size: 1.1rem;
+}
+h1{
+    font-size: 3rem;
+    font-weight: 550;
+    letter-spacing: 2px;
+}
+h2{
+    font-size: 1.5rem;
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+/* Heading */
+.heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    color: #91282f;
+}
+.heading h2{
+    width: 70%;
+    text-align: center;
+}
+/* Main Form*/
+.message{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.message-container{
+    min-height: 85vh;
+    width: 100%;
+    background-color: #85c4cb;
+    background: linear-gradient(
+    to right,
+    #91282f 0%,
+    #91282f 50%,
+    #85c4cb 50%,
+    #85c4cb 100%
+  );
+    position: relative;
+    z-index: 1;
+}
+.white-back{
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    background-color: white;
+}
+.send-message{
+    background-color: #fff;
+    position: absolute;
+    z-index: 2;
+    height: 550px;
+    width: 1200px;
+    margin-left: 270px;
+    margin-top: 40px;
+    padding: auto;
+}
+.send-message h2{
+    color: #91282f;
+    font-weight: 550;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 200px;
+
+}
+.send-message form{
+    margin-left: 200px;
+    width: 82%;
+    color: #91282f;
+}
+.contact-us{
+    position: absolute;
+    z-index: 3;
+    box-shadow: 0 5px 5px #aaa;
+    margin-left: 30px;
+    margin-top: 105px;
+}
+.contact-us img{
+    max-width:430px
+}
