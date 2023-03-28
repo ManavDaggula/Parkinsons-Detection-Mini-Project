@@ -1,5 +1,0 @@
-- relevant attributes
-- use classification algos decision trees and random forest
-- feature selection
-- confusion matrix (accuracy, precision, sensitivity)
-- GUI
