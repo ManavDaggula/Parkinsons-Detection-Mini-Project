@@ -40,103 +40,119 @@
                     <div class="row">
                         <div class="col-md-2 form-group">
                             <label><b>MDVP:Fo(Hz) </b></label>
-                            <input type="text" class="form-control" id="mdvp_fo" name="MDVP:Fo(Hz)" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="mdvp_fo" name="MDVP:Fo(Hz)"
+                                placeholder="{{values['MDVP:Fo(Hz)']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>MDVP:Fhi(Hz) </b></label>
-                            <input type="text" class="form-control" id="mdvp_fhi" name="MDVP:Fhi(Hz)" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="mdvp_fhi" name="MDVP:Fhi(Hz)"
+                                placeholder="{{values['MDVP:Fhi(Hz)']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>MDVP:Flo(Hz) </b></label>
-                            <input type="text" class="form-control" id="mdvp_flo" name="MDVP:Flo(Hz)" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="mdvp_flo" name="MDVP:Flo(Hz)"
+                                placeholder="{{values['MDVP:Flo(Hz)']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>MDVP:Jitter(%) </b></label>
-                            <input type="text" class="form-control" id="mdvp_jitter_per" name="MDVP:Jitter(%)" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="mdvp_jitter_per" name="MDVP:Jitter(%)"
+                                placeholder="{{values['MDVP:Jitter(%)']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>MDVP:Jitter(Abs) </b></label>
-                            <input type="text" class="form-control" id="mdvp_jitter_abs" name="MDVP:Jitter(Abs)" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="mdvp_jitter_abs" name="MDVP:Jitter(Abs)"
+                                placeholder="{{values['MDVP:Jitter(Abs)']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>MDVP:RAP </b></label>
-                            <input type="text" class="form-control" id="mdvp_rap" name="MDVP:RAP" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="mdvp_rap" name="MDVP:RAP"
+                                placeholder="{{values['MDVP:RAP']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>MDVP:PPQ </b></label>
-                            <input type="text" class="form-control" id="mdvp_ppq" name="MDVP:PPQ" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="mdvp_ppq" name="MDVP:PPQ"
+                                placeholder="{{values['MDVP:PPQ']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>Jitter:DDP </b></label>
-                            <input type="text" class="form-control" id="jitter_ddp" name="Jitter:DDP" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="jitter_ddp" name="Jitter:DDP"
+                                placeholder="{{values['Jitter:DDP']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>MDVP:Shimmer </b></label>
-                            <input type="text" class="form-control" id="mdvp_shimmer" name="MDVP:Shimmer" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="mdvp_shimmer" name="MDVP:Shimmer"
+                                placeholder="{{values['MDVP:Shimmer']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>MDVP:Shimmer(dB)</b></label>
-                            <input type="text" class="form-control" id="mdvp_shimmer_db" name="MDVP:Shimmer(dB)" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="mdvp_shimmer_db" name="MDVP:Shimmer(dB)"
+                                placeholder="{{values['MDVP:Shimmer(dB)']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>Shimmer:APQ3 </b></label>
-                            <input type="text" class="form-control" id="shimmer_apq3" name="Shimmer:APQ3" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="shimmer_apq3" name="Shimmer:APQ3"
+                                placeholder="{{values['Shimmer:APQ3']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>Shimmer:APQ5 </b></label>
-                            <input type="text" class="form-control" id="shimmer_apq5" name="Shimmer:APQ5" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="shimmer_apq5" name="Shimmer:APQ5"
+                                placeholder="{{values['Shimmer:APQ5']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>MDVP:APQ </b></label>
-                            <input type="text" class="form-control" id="mdvp_apq" name="MDVP:APQ" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="mdvp_apq" name="MDVP:APQ"
+                                placeholder="{{values['MDVP:APQ']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>Shimmer:DDA </b></label>
-                            <input type="text" class="form-control" id="shimmer_dda" name="Shimmer:DDA" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="shimmer_dda" name="Shimmer:DDA"
+                                placeholder="{{values['Shimmer:DDA']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>NHR: </b></label>
-                            <input type="text" class="form-control" id="nhr" name="NHR" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="nhr" name="NHR" placeholder="{{values['NHR']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>HNR: </b></label>
-                            <input type="text" class="form-control" id="hnr" name="HNR" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="hnr" name="HNR" placeholder="{{values['HNR']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>RPDE: </b></label>
-                            <input type="text" class="form-control" id="rpde" name="RPDE" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="rpde" name="RPDE"
+                                placeholder="{{values['RPDE']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>DFA: </b></label>
-                            <input type="text" class="form-control" id="dfa" name="DFA" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="dfa" name="DFA" placeholder="{{values['DFA']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>spread1: </b></label>
-                            <input type="text" class="form-control" id="spread1" name="spread1" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="spread1" name="spread1"
+                                placeholder="{{values['spread1']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>spread2: </b></label>
-                            <input type="text" class="form-control" id="spread2" name="spread2" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="spread2" name="spread2"
+                                placeholder="{{values['spread2']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>D2: </b></label>
-                            <input type="text" class="form-control" id="d2" name="D2" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="d2" name="D2" placeholder="{{values['D2']}}">
                         </div>
                         <div class="col-md-2 form-group">
                             <label><b>PPE: </b></label>
-                            <input type="text" class="form-control" id="ppe" name="PPE" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                            <input type="text" class="form-control" id="ppe" name="PPE" placeholder="{{values['PPE']}}">
                         </div>
 
                         <div class="col-md-12 form-group">
-                            <button class="btn btn-primary form-control" style="background-color: #91282f">Parkinson's
-                                Test Result</button>
+                            <button class="btn btn-primary form-control" style="background-color: #91282f">Go Back</button>
                         </div>
                     </div>
 
                 </form>
                 <br>
                 <div class="col-md-12" style="text-align: center">
-                    <h2><span id="prediction"></span></h2>
+                    <h2><span id="prediction">{{pred}}</span></h2>
                 </div>
             </div>
             <div class="contact-us">
@@ -157,7 +173,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    
+    <script>
+        submit_btn = document.querySelector("form button")
+        submit_btn.addEventListener("click", async (e) => {
+            e.preventDefault();
+            window.location.href="/"
+        })
+    </script>
+
 </body>
 
 </html>
