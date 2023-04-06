@@ -59,7 +59,7 @@ h2{
 }
 .send-message{
     background-color: #fff;
-    position: absolute;
+    /* position: absolute; */
     z-index: 2;
     height: 550px;
     width: 1200px;
@@ -82,6 +82,7 @@ h2{
 }
 .contact-us{
     position: absolute; 
+    top: 0px;
     z-index: 3;
     box-shadow: 0 5px 5px #aaa;
     margin-left: 30px;
@@ -89,4 +90,16 @@ h2{
 }
 .contact-us img{
     max-width:430px
+}
+.value_description{
+    padding: 10px;
+    font-style: italic;
+}
+
+.value_description table{
+    border: 3px solid #91282f;
+}
+
+.table-hover tbody>tr:hover{
+    background-color: hsl(186, 40%, 86%);
 }

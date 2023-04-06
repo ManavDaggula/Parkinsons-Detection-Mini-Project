@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>PARKINSON DISEASE DETECTION</title>
+
+    <!-- css  -->
+    <link rel='stylesheet' href="{{ url_for('static', filename='style copy.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;900&family=Poppins:wght@100;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+
+<body>
+    <div class="heading">
+        <h1 id="heading">PARKINSON DISEASE DETECTION!</h1>
+        <h2>Parkinson's disease is a progressive disorder that affects the nervous system and the parts of the body
+            controlled by the nerves.</h2>
+    </div>
+    <section class="message">
+        <div class="message-container">
+            <div class="white-back">
+                <!-- <img src="{{ url_for('static', filename='brain.jpg') }}" width="730px">-->
+            </div>
+            <div class="send-message">
+                <h2>Fill out the details: </h2>
+                <form accept-charset="utf-8" name="form_data" id="form_data" method="post" action="/predict">
+                    <!-- method="post" action="/predict"-->
+                    <div class="row">
+                        <div class="col-md-2 form-group">
+                            <label><b>MDVP:Fo(Hz) </b></label>
+                            <input type="text" class="form-control" id="mdvp_fo" name="MDVP:Fo(Hz)" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>MDVP:Fhi(Hz) </b></label>
+                            <input type="text" class="form-control" id="mdvp_fhi" name="MDVP:Fhi(Hz)" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>MDVP:Flo(Hz) </b></label>
+                            <input type="text" class="form-control" id="mdvp_flo" name="MDVP:Flo(Hz)" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>MDVP:Jitter(%) </b></label>
+                            <input type="text" class="form-control" id="mdvp_jitter_per" name="MDVP:Jitter(%)" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>MDVP:Jitter(Abs) </b></label>
+                            <input type="text" class="form-control" id="mdvp_jitter_abs" name="MDVP:Jitter(Abs)" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>MDVP:RAP </b></label>
+                            <input type="text" class="form-control" id="mdvp_rap" name="MDVP:RAP" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>MDVP:PPQ </b></label>
+                            <input type="text" class="form-control" id="mdvp_ppq" name="MDVP:PPQ" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>Jitter:DDP </b></label>
+                            <input type="text" class="form-control" id="jitter_ddp" name="Jitter:DDP" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>MDVP:Shimmer </b></label>
+                            <input type="text" class="form-control" id="mdvp_shimmer" name="MDVP:Shimmer" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>MDVP:Shimmer(dB)</b></label>
+                            <input type="text" class="form-control" id="mdvp_shimmer_db" name="MDVP:Shimmer(dB)" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>Shimmer:APQ3 </b></label>
+                            <input type="text" class="form-control" id="shimmer_apq3" name="Shimmer:APQ3" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>Shimmer:APQ5 </b></label>
+                            <input type="text" class="form-control" id="shimmer_apq5" name="Shimmer:APQ5" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>MDVP:APQ </b></label>
+                            <input type="text" class="form-control" id="mdvp_apq" name="MDVP:APQ" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>Shimmer:DDA </b></label>
+                            <input type="text" class="form-control" id="shimmer_dda" name="Shimmer:DDA" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>NHR: </b></label>
+                            <input type="text" class="form-control" id="nhr" name="NHR" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>HNR: </b></label>
+                            <input type="text" class="form-control" id="hnr" name="HNR" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>RPDE: </b></label>
+                            <input type="text" class="form-control" id="rpde" name="RPDE" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>DFA: </b></label>
+                            <input type="text" class="form-control" id="dfa" name="DFA" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>spread1: </b></label>
+                            <input type="text" class="form-control" id="spread1" name="spread1" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>spread2: </b></label>
+                            <input type="text" class="form-control" id="spread2" name="spread2" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>D2: </b></label>
+                            <input type="text" class="form-control" id="d2" name="D2" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label><b>PPE: </b></label>
+                            <input type="text" class="form-control" id="ppe" name="PPE" pattern="[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)" required>
+                        </div>
+
+                        <div class="col-md-12 form-group">
+                            <button class="btn btn-primary form-control" style="background-color: #91282f">Parkinson's
+                                Test Result</button>
+                        </div>
+                    </div>
+
+                </form>
+                <br>
+                <div class="col-md-12" style="text-align: center">
+                    <h2><span id="prediction"></span></h2>
+                </div>
+            </div>
+            <div class="contact-us">
+                <img src="{{ url_for('static', filename='parkinson_cartoon.jpeg') }}">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="value_description">
+        <p>See the below table to know more about the above required parameters.</p>
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Voice Parameter</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">MDVP:F0 (Hz)</th>
+                    <td>Average vocal fundamental frequency</td>
+                </tr>
+                <tr>
+                    <th scope="row">MDVP:Fhi (Hz)</th>
+                    <td>Maximum vocal fundamental frequency</td>
+                </tr>
+                <tr>
+                    <th scope="row">MDVP:Flo (Hz)</th>
+                    <td>Minimum vocal fundamental frequency</td>
+                </tr>
+                <tr>
+                    <th scope="row">MDVP:Jitter(%)</th>
+                    <td>MDVP jitter in percentage</td>
+                </tr>
+                <tr>
+                    <th scope="row">MDVP:Jitter(Abs)</th>
+                    <td>MDVP absolute jitter in ms</td>
+                </tr>
+                <tr>
+                    <th scope="row">MDVP:RAP</th>
+                    <td>MDVP relative amplitude perturbation</td>
+                </tr>
+                <tr>
+                    <th scope="row">MDVP:PPQ</th>
+                    <td>MDVP five-point period perturbation quotient</td>
+                </tr>
+                <tr>
+                    <th scope="row">Jitter:DDP</th>
+                    <td>Average absolute difference of differences between jitter cycles</td>
+                </tr>
+                <tr>
+                    <th scope="row">MDVP:Shimmer</th>
+                    <td>MDVP local shimmer</td>
+                </tr>
+                <tr>
+                    <th scope="row">MDVP:Shimmer(db)</th>
+                    <td>MDVP local shimmer in dB</td>
+                </tr>
+                <tr>
+                    <th scope="row">Shimmer:APQ3</th>
+                    <td>Three-point amplitude perturbation quotient</td>
+                </tr>
+                <tr>
+                    <th scope="row">Shimmer:APQ5</th>
+                    <td>Five-point amplitude perturbation quotient</td>
+                </tr>
+                <tr>
+                    <th scope="row">MDVP:APQ11</th>
+                    <td>MDVP 11-point amplitude perturbation quotient</td>
+                </tr>
+                <tr>
+                    <th scope="row">Shimmer:DDA</th>
+                    <td>Average absolute differences between the amplitudes of consecutive
+                        periods</td>
+                </tr>
+                <tr>
+                    <th scope="row">NHR</th>
+                    <td>Noise-to-harmonics ratio</td>
+                </tr>
+                <tr>
+                    <th scope="row">HNR</th>
+                    <td>Harmonics-to-noise ratio</td>
+                </tr>
+                <tr>
+                    <th scope="row">RPDE</th>
+                    <td>Recurrence period density entropy measure</td>
+                </tr>
+                <tr>
+                    <th scope="row">D2</th>
+                    <td>Correlation dimension</td>
+                </tr>
+                <tr>
+                    <th scope="row">DFA</th>
+                    <td>Signal fractal scaling exponent of detrended fluctuation analysis</td>
+                </tr>
+                <tr>
+                    <th scope="row">Spread1</th>
+                    <td>Two nonlinear measures of fundamental</td>
+                </tr>
+                <tr>
+                    <th scope="row">Spread2</th>
+                    <td>Frequency variation</td>
+                </tr>
+                <tr>
+                    <th scope="row">PPE</th>
+                    <td>Pitch period entropy</td>
+                </tr>              
+            </tbody>
+          </table>
+    </section>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    
+</body>
+
+</html>
